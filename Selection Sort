@@ -1,0 +1,13 @@
+void selectionSort(vector<int>& arr, int n)
+{   
+    for(int i=0;i<n-1;i++)  // n-1 comparisons as last element is sorted
+	{
+		int mini = i;  // make start element as min
+		  for(int j = i+1; j<n; j++)
+		  {
+			  if(arr[j] < arr[mini])
+				  mini = j;
+		  }
+		swap (arr[mini],arr[i]);
+	}
+}
